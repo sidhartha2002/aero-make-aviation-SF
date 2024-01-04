@@ -6,7 +6,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Airplane(props) {
-  const { nodes, materials } = useGLTF("./models/airplane/model.glb");
+  const { nodes, materials } = useGLTF(
+    "https://raw.githubusercontent.com/sidhartha2002/aero-make-aviation/main/public/models/airplane/model.glb"
+  );
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -24,4 +26,6 @@ export function Airplane(props) {
   );
 }
 
-useGLTF.preload("./models/airplane/model.glb");
+useGLTF.preload(
+  "https://raw.githubusercontent.com/sidhartha2002/aero-make-aviation/main/public/models/airplane/model.glb"
+);
