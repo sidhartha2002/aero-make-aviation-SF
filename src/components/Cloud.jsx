@@ -8,9 +8,7 @@ import React, { useRef } from "react";
 import { fadeOnBeforeCompile } from "../utils/fadeMaterial";
 
 export function Cloud({ sceneOpacity, ...props }) {
-  const { nodes, materials } = useGLTF(
-    "https://raw.githubusercontent.com/sidhartha2002/aero-make-aviation/main/public/models/cloud/model.gltf"
-  );
+  const { nodes, materials } = useGLTF("./models/cloud/model.gltf");
 
   const materialRef = useRef();
 
@@ -32,6 +30,4 @@ export function Cloud({ sceneOpacity, ...props }) {
   );
 }
 
-useGLTF.preload(
-  "https://raw.githubusercontent.com/sidhartha2002/aero-make-aviation/main/public/models/cloud/model.gltf"
-);
+useGLTF.preload("./models/cloud/model.gltf");
